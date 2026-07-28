@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mohamed Sobhy - Junior Software Testing / QA Engineer Portfolio. Explore my projects, skills, and experience in manual and automated testing, Selenium, Appium, and API testing." />
+  <meta name="keywords"
+    content="QA Engineer, Software Testing, ISTQB, Selenium, Automation Testing, Postman, Portfolio" />
+  <meta name="author" content="Mohamed Sobhy" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <title>Mohamed Sobhy's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="theme-toggle" onclick="toggleDarkMode()">
+    <i class="fas fa-moon" id="theme-icon"></i>
+  </div>
+
+  <div class="visitor-counter">
+    <span class="counter-label">VISITORS:</span>
+    <span class="counter-value" id="visitor-count">000000</span>
+  </div>
+
+  <div class="desktop">
+    <div class="icon-card">
+      <div class="icon" onclick="openWindow('about')">
+        <img src="icons/about.webp" alt="About" />
+        <p>About Me</p>
+      </div>
+
+      <div class="icon" onclick="openWindow('education')">
+        <img src="icons/education.webp" alt="Education" />
+        <p>Education</p>
+      </div>
+
+      <div class="icon" onclick="openWindow('experience')">
+        <img src="icons/experience.webp" alt="Experience" />
+        <p>Experience</p>
+      </div>
+
+      <div class="icon" onclick="openWindow('projects')">
+        <img src="icons/projects.webp" alt="Projects" />
+        <p>Projects</p>
+      </div>
+
+      <div class="icon" onclick="openWindow('skills')">
+        <img src="icons/skills.webp" alt="Skills" />
+        <p>Skills</p>
+      </div>
+
+      <div class="icon" onclick="openWindow('certificates')">
+        <img src="icons/certificates.webp" alt="Certificates" />
+        <p>Certificates</p>
+      </div>
+
+      <div class="icon" onclick="openWindow('activities')">
+        <img src="icons/activities.webp" alt="Activities" />
+        <p>Activities</p>
+      </div>
+
+      <div class="icon" onclick="openWindow('contact')">
+        <img src="icons/contact.webp" alt="Contact" />
+        <p>Contact</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="about-window">
+    <div class="window-header">
+      <span>About Me</span>
+      <button class="close-btn" onclick="closeWindow('about')">
+        <img src="icons/close.webp" alt="Close" />
+      </button>
+    </div>
+    <div class="window-content about-content">
+      <div class="about-photo">
+        <img src="assets/me.png" alt="My Photo" />
+      </div>
+      <div class="about-text">
+        <h1>Mohamed Sobhy</h1>
+        <h2>Junior Software Testing / QA Engineer</h2>
+
+        <div class="cv-section">
+          <a href="assets/Mohamed_Sobhy_Junior_Software_Test_Engineer.pdf" target="_blank" class="cv-download">View
+            CV</a>
+        </div>
+        <br />
+        <p style="padding: 0 40px">
+          <b>ISTQB Certified QA Engineer</b> with hands-on experience in manual
+          and automated testing across web, mobile, and API layers. Skilled in
+          designing test cases, executing regression and exploratory testing,
+          and building automation frameworks using <b>Selenium</b>,
+          <b>TestNG</b>, and <b>Cucumber (BDD)</b>. Strong foundation in
+          SDLC/STLC, defect lifecycle management, and Agile collaboration.
+        </p>
+        <br />
+        <!-- <p>
+          I've experience working with AI Agents, RAGs, LangChain, LangGraph, LLMs, Fast API, Vector databases, MLOps (MLflow), Git, Docker, CI/CD and several frameworks and technologies related to Full Stack development,
+          Starting from Backend development using: Django, Flask, REST APIs
+          To building modern Frontend websites using: React JS and HTML, CSS, Java Script.
+          And I'm also experienced working with different Databases; designing and using: Oracle, PostgreSQL and MySQL.
+          In addition to the Machine learning foundations including: Supervised, Unsupervised Learning, Deep Learning, NLP techniques.
+        </p> -->
+      </div>
+
+      <!-- <div class="leetcode-section">
+        <p class="leetcode-intro">Visit my problem solving zone ↓</p>
+        <a href="https://leetcode.com/3OWBLspDdX/" target="_blank" class="leetcode-link">LeetCode profile</a>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="window" id="education-window">
+    <div class="window-header">
+      <span>Education</span>
+      <button class="close-btn" onclick="closeWindow('education')">
+        <img src="icons/close.webp" alt="Close" />
+      </button>
+    </div>
+
+    <div class="window-content education-content">
+      <p><b>University:</b> Benha University</p>
+      <p><b>Faculty:</b> Faculty of Computers and Artificial Intelligence</p>
+      <p><b>Major:</b> Computer Science</p>
+      <p><b>Graduation Year:</b> 2024</p>
+
+      <br />
+
+      <h3>Training &amp; Courses</h3>
+
+      <div class="courses-grid">
+        <div class="course">
+          <h4>ISTQB Foundation Level v4.0</h4>
+          <p>
+            From Basics to Certification – Information Technology Institute
+            (ITI) MaharaTech Platform.
+          </p>
+        </div>
+
+        <div class="course">
+          <h4>Software Testing Course</h4>
+          <p>
+            Comprehensive software testing training at Route IT Training
+            Center (Feb 2025 – Sep 2025).
+          </p>
+        </div>
+
+
+        <div class="course">
+          <h4>Software Testing – Summer Training</h4>
+          <p>
+            Software Testing summer program at Information Technology
+            Institute (ITI) (Sep 2024 – Oct 2024).
+          </p>
+        </div>
+
+        <div class="course">
+          <h4>MEAN Stack Development</h4>
+          <p>
+            Summer Training at Information Technology Institute (ITI)
+            (Aug 2023 – Sep 2023).
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="experience-window">
+    <div class="window-header">
+      <span>Experience</span>
+      <button class="close-btn" onclick="closeWindow('experience')">
+        <img src="icons/close.webp" alt="Close" />
+      </button>
+    </div>
+    <div class="window-content experience-content">
+      <div class="experience-item">
+        <h3>
+          <img src="icons/maharatech.webp" alt="MCIT" class="experience-logo" />
+          Ministry of Communications and IT (MCIT) – <b>Software Testing Trainee</b>
+        </h3>
+        <p><strong>Feb 2026 – Jun 2026</strong></p>
+        <p>
+          • Completed <b>252 training hours (126 sessions)</b> at Digilians
+          Intensive Diploma under the Ministry of Communications and
+          Information Technology.
+        </p>
+        <p>
+          • Designed and executed manual test cases including
+          <b>functional</b>, <b>regression</b>, and <b>bug reporting</b>
+          activities.
+        </p>
+        <p>
+          • Tested APIs using <b>Postman</b> and <b>REST Assured</b>.
+        </p>
+        <p>
+          • Developed automation scripts using <b>Selenium WebDriver</b>,
+          <b>TestNG</b>, and <b>Cucumber</b>.
+        </p>
+        <p>
+          • Performed database validation using <b>SQL</b> and executed
+          performance testing scenarios using <b>JMeter</b>.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>
+          <img src="icons/nezam.webp" alt="EDGE Pro" class="experience-logo" />
+          EDGE Pro for Information Systems – <b>Information Technology Specialist</b>
+        </h3>
+        <p><strong>Sep 2024 – Jan 2026</strong></p>
+        <p>
+          • Provided IT support and resolved <b>software</b>,
+          <b>hardware</b>, and <b>network-related</b> issues.
+        </p>
+        <p>
+          • Maintained system performance and data accuracy while assisting
+          end users with technical troubleshooting.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="projects-window">
+    <div class="window-header">
+      <span>Projects</span>
+      <button class="close-btn" onclick="closeWindow('projects')">
+        <img src="icons/close.webp" alt="Close" />
+      </button>
+    </div>
+    <div class="window-content projects-content">
+      <div class="project">
+        <h3 class="project-title">QPilot AI – <b>Multi-Agent QA Assistant</b></h3>
+
+        <p class="project-description">
+          • Architected and deployed <b>QPilot AI</b>, an AI-powered QA
+          automation system that transforms requirement documents into
+          structured QA deliverables (user stories, acceptance criteria, test
+          scenarios, test cases). <br />
+
+          • Designed a <b>multi-agent workflow</b> leveraging
+          <b>OpenRouter LLMs</b> and <b>Qdrant vector DB</b>, generating
+          <b>9+ QA artifacts</b> in one pipeline. <br />
+
+          • Utilized <b>n8n</b> for workflow orchestration and
+          <b>PostgreSQL</b> for artifact versioning.
+        </p>
+
+        <p class="project-tools">
+          <b>Tools:</b> Python, FastAPI, OpenRouter, PostgreSQL, Qdrant, n8n.
+        </p>
+        <a class="project-link" href="https://github.com/mohamedsobhy77/qpilot-ai" target="_blank"
+          rel="noopener noreferrer">
+          <br />View on GitHub
+        </a>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Selenium Automation Framework</h3>
+
+        <p class="project-description">
+          • Developed a scalable <b>UI automation framework</b> using
+          <b>Page Object Model (POM)</b>, reusable utilities, and explicit
+          waits. <br />
+
+          • Implemented automated test execution, reporting, and
+          <b>data-driven testing</b> practices to improve test
+          maintainability.
+        </p>
+
+        <p class="project-tools">
+          <b>Tools:</b> Java, Selenium WebDriver, TestNG, POM.
+        </p>
+        <a class="project-link" href="https://github.com/mohamedsobhy77/selenium-automation-framework" target="_blank"
+          rel="noopener noreferrer">
+          <br />View on GitHub
+        </a>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">BDD Automation Framework</h3>
+
+        <p class="project-description">
+          • Implemented <b>Behavior-Driven Development (BDD)</b> automation
+          using <b>Cucumber</b> and <b>Gherkin</b> feature files. <br />
+
+          • Created reusable step definitions and automated end-to-end user
+          scenarios for improved collaboration between QA and stakeholders.
+        </p>
+
+        <p class="project-tools">
+          <b>Tools:</b> Java, Selenium, Cucumber, Gherkin.
+        </p>
+        <a class="project-link" href="https://github.com/mohamedsobhy77/cucumber-project" target="_blank"
+          rel="noopener noreferrer">
+          <br />View on GitHub
+        </a>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Mobile Testing Automation</h3>
+
+        <p class="project-description">
+          • Automated functional test scenarios for <b>Android mobile
+            applications</b> using <b>Appium</b>. <br />
+
+          • Validated mobile UI interactions, navigation flows, and user
+          actions across different app screens.
+        </p>
+
+        <p class="project-tools">
+          <b>Tools:</b> Java, Appium, Android Studio.
+        </p>
+        <a class="project-link" href="https://github.com/mohamedsobhy77/Appium-mobile-testing" target="_blank"
+          rel="noopener noreferrer">
+          <br />View on GitHub
+        </a>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">Spotify Web API Testing</h3>
+
+        <p class="project-description">
+          • Designed and executed <b>10+ functional REST API test cases</b>
+          using <b>Postman</b>. <br />
+
+          • Validated response status codes, response data, and audio features
+          using Postman pre-scripts and automated tests.
+        </p>
+
+        <p class="project-tools">
+          <b>Tools:</b> Postman, REST API.
+        </p>
+        <a class="project-link" href="https://github.com/mohamedsobhy77/spotify-api-testing" target="_blank"
+          rel="noopener noreferrer">
+          <br />View on GitHub
+        </a>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">OpenCart E-commerce Platform – <b>Manual Testing</b></h3>
+
+        <p class="project-description">
+          • Designed and executed <b>356+ manual test cases</b> covering core
+          e-commerce modules. <br />
+
+          • Reported <b>23 defects</b> across critical user flows with proper
+          severity and priority classification.
+        </p>
+
+        <p class="project-tools">
+          <b>Tools:</b> Manual Testing, JIRA, Bug Reporting.
+        </p>
+        <a class="project-link" href="https://github.com/mohamedsobhy77/OpenCart-Manual-Testing-project" target="_blank"
+          rel="noopener noreferrer">
+          <br />View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="skills-window">
+    <div class="window-header">
+      <span>Skills</span>
+      <button class="close-btn" onclick="closeWindow('skills')">
+        <img src="icons/close.webp" alt="Close" />
+      </button>
+    </div>
+
+    <div class="window-content skills-content">
+      <div class="skills-grid">
+        <div class="skills-section">
+          <h3>Manual &amp; Functional Testing</h3>
+          <div class="skills-icons">
+            <div class="skill-item"><span>Manual Testing</span></div>
+            <div class="skill-item"><span>Functional Testing</span></div>
+            <div class="skill-item"><span>Regression Testing</span></div>
+            <div class="skill-item"><span>Exploratory Testing</span></div>
+            <div class="skill-item"><span>Smoke Testing</span></div>
+            <div class="skill-item"><span>End-to-End Testing</span></div>
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <h3>Automation Testing</h3>
+          <div class="skills-icons">
+            <div class="skill-item"><i class="devicon-selenium-original colored"></i><span>Selenium WebDriver</span>
+            </div>
+            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>TestNG</span></div>
+            <div class="skill-item"><span>Cucumber (BDD)</span></div>
+            <div class="skill-item"><span>Page Object Model</span></div>
+            <div class="skill-item"><span>Appium</span></div>
+            <div class="skill-item"><span>Data-Driven Testing</span></div>
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <h3>API Testing</h3>
+          <div class="skills-icons">
+            <div class="skill-item"><span>Postman</span></div>
+            <div class="skill-item"><span>REST APIs</span></div>
+            <div class="skill-item"><span>REST Assured</span></div>
+            <div class="skill-item"><span>API Assertions</span></div>
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <h3>QA Concepts &amp; Methodologies</h3>
+          <div class="skills-icons">
+            <div class="skill-item"><span>SDLC / STLC</span></div>
+            <div class="skill-item"><span>Test Planning</span></div>
+            <div class="skill-item"><span>Bug Reporting</span></div>
+            <div class="skill-item"><span>Defect Life Cycle</span></div>
+            <div class="skill-item"><span>Severity &amp; Priority</span></div>
+            <div class="skill-item"><span>Requirements Analysis</span></div>
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <h3>Programming Languages</h3>
+          <div class="skills-icons">
+            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+            <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+            <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+            <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>SQL</span></div>
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <h3>Tools &amp; Platforms</h3>
+          <div class="skills-icons">
+            <div class="skill-item"><i class="devicon-jira-plain colored"></i><span>JIRA</span></div>
+            <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="skill-item"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+            <div class="skill-item"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
+            <div class="skill-item"><i class="devicon-intellij-plain colored"></i><span>IntelliJ IDEA</span></div>
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <h3>Agile &amp; AI QA</h3>
+          <div class="skills-icons">
+            <div class="skill-item"><span>Agile / Scrum</span></div>
+            <div class="skill-item"><span>Kanban</span></div>
+            <div class="skill-item"><span>Prompt Engineering</span></div>
+            <div class="skill-item"><span>AI-Assisted Testing</span></div>
+            <div class="skill-item"><span>Multi-Agent QA</span></div>
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <h3>Performance &amp; Mobile Testing</h3>
+          <div class="skills-icons">
+            <div class="skill-item"><span>JMeter</span></div>
+            <div class="skill-item"><i class="devicon-android-plain colored"></i><span>Mobile Testing</span></div>
+            <div class="skill-item"><i class="devicon-androidstudio-plain colored"></i><span>Android Studio</span></div>
+            <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="certificates-window">
+    <div class="window-header">
+      <span>Certificates</span>
+      <button class="close-btn" onclick="closeWindow('certificates')">
+        <img src="icons/close.webp" alt="Close" />
+      </button>
+    </div>
+    <div class="window-content certificates-content">
+      <h2>My Certificates</h2>
+
+      <div class="certificates-grid">
+        <div class="certificate-card">
+          <img src="icons/istqb.webp" alt="ISTQB Logo" class="certificate-logo" />
+          <p class="certificate-title">
+            ISTQB® Certified Tester Foundation Level (CTFL) v4.0
+          </p>
+          <p style="font-size:0.85em; color: #888;">Credential ID: 250513014</p>
+          <a href="#" class="certificate-link">View Certificate</a>
+        </div>
+
+        <div class="certificate-card">
+          <img src="icons/istqb.webp" alt="ISTQB Logo" class="certificate-logo" />
+          <p class="certificate-title">
+            ISTQB® Certified Tester – Mobile Application Testing (CT-MAT)
+          </p>
+          <p style="font-size:0.85em; color: #888;">Credential ID: 260203077</p>
+          <a href="#" class="certificate-link">View Certificate</a>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="activities-window">
+    <div class="window-header">
+      <span>Activities</span>
+      <button class="close-btn" onclick="closeWindow('activities')">
+        <img src="icons/close.webp" alt="Close" />
+      </button>
+    </div>
+
+    <div class="window-content activities-content">
+      <div class="activity">
+        <img src="icons/maharatech.webp" alt="MCIT Logo" style="padding: 4px" />
+        <div class="activity-content">
+          <h3>Digilians Intensive Diploma – Software Testing</h3>
+          <p class="org"><b>Ministry of Communications and Information Technology (MCIT)</b></p>
+          <p class="date">Feb 2026 – Jun 2026 · 252 hours</p>
+        </div>
+      </div>
+
+      <div class="activity">
+        <img src="icons/route-logo.webp" alt="Route Logo" style="padding: 4px" />
+        <div class="activity-content">
+          <h3>Software Testing Course</h3>
+          <p class="org"><b>Route IT Training Center</b></p>
+          <p class="date">Feb 2025 – Sep 2025</p>
+        </div>
+      </div>
+
+
+
+      <div class="activity">
+        <img src="icons/iti.png" alt="ITI Logo" />
+        <div class="activity-content">
+          <h3>Software Testing – Summer Training</h3>
+          <p class="org"><b>Information Technology Institute (ITI)</b></p>
+          <p class="date">Sep 2024 – Oct 2024</p>
+        </div>
+      </div>
+
+      <div class="activity">
+        <img src="icons/iti.png" alt="ITI Logo" />
+        <div class="activity-content">
+          <h3>MEAN Stack Development – Summer Training</h3>
+          <p class="org"><b>Information Technology Institute (ITI)</b></p>
+          <p class="date">Aug 2023 – Sep 2023</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="contact-window">
+    <div class="window-header">
+      <span>Contact</span>
+      <button class="close-btn" onclick="closeWindow('contact')">
+        <img src="icons/close.webp" alt="Close" />
+      </button>
+    </div>
+    <div class="window-content contact-content">
+      <h5>Hi there!</h5>
+      <p>
+        <br />Feel free to reach out to me through any of the links below:
+      </p>
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        <b>Email :</b>
+        <a href="mailto:mohamedsobhyayesh@gmail.com">mohamedsobhyayesh@gmail.com</a>
+      </p>
+      <p>
+        <i class="fa-brands fa-linkedin"></i>
+        <b>LinkedIn :</b>
+        <a href="https://www.linkedin.com/in/mohamedsobhyayesh/" target="_blank">
+          Mohamed Sobhy
+        </a>
+      </p>
+      <p>
+        <i class="fa-brands fa-whatsapp"></i>
+        <b>Phone Number :</b>
+        <a href="https://wa.me/+201227221819/" target="_blank">
+          +20 1227 221 819
+        </a>
+      </p>
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        <b>Location :</b>
+        Nasr City, Cairo, Egypt
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
